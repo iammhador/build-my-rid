@@ -7,7 +7,6 @@ import { useSession, signIn } from "next-auth/react";
 
 export default function Login() {
   const { data } = useSession();
-  console.log(data);
   return (
     <div>
       <Head>

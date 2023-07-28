@@ -6,9 +6,6 @@ import { TbBrandGithubFilled } from "react-icons/tb";
 import { signIn } from "next-auth/react";
 
 export default function Register() {
-  // const { register, handleSubmit } = useForm();
-  // const onSubmit = (data) => console.log(data);
-
   return (
     <div>
       <Head>
