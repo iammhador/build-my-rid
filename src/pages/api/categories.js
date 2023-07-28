@@ -18,11 +18,18 @@ async function run(req, res) {
 
     if (req.method === "GET") {
       const categories = await categoriesCollection.find({}).toArray();
-      res.status(200).json({
-        status: "success",
-        message: "all categories details found successfully",
-        data: categories,
-      });
+      if (!categories) {
+        res.status(404).json({
+          status: "error",
+          message: "Categories not found",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "All categories found successfully",
+          data: categories,
+        });
+      }
     }
   } finally {
   }

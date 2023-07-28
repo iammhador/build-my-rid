@@ -18,11 +18,18 @@ async function run(req, res) {
 
     if (req.method === "GET") {
       const motherboard = await motherboardCollection.find({}).toArray();
-      res.status(200).json({
-        status: "success",
-        message: "all motherboard details found successfully",
-        data: motherboard,
-      });
+      if (!motherboard) {
+        res.status(404).json({
+          status: "error",
+          message: "Motherboard not found",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "All motherboard found successfully",
+          data: motherboard,
+        });
+      }
     }
   } finally {
   }

@@ -1,12 +1,14 @@
 import RootLayout from "@/components/layout/root";
 import Banner from "@/components/ui/banner";
 import Categories from "@/components/ui/categories";
+import Products from "@/components/ui/products";
 import React from "react";
 
-const Home = ({ categories }) => {
+const Home = ({ categories, products }) => {
   return (
     <div>
       <Banner />
+      <Products products={products} />
       <Categories categories={categories} />
     </div>
   );
@@ -19,7 +21,10 @@ Home.getLayout = function getLayout(page) {
 
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:3000/api/categories");
-  const data = await res.json();
+  const categories = await res.json();
 
-  return { props: { categories: data.data } };
+  const response = await fetch("http://localhost:3000/api/products");
+  const products = await response.json();
+
+  return { props: { categories: categories.data, products: products.data } };
 };

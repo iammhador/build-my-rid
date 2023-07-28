@@ -16,11 +16,18 @@ async function run(req, res) {
 
     if (req.method === "GET") {
       const others = await othersCollection.find({}).toArray();
-      res.status(200).json({
-        status: "success",
-        message: "all others details found successfully",
-        data: others,
-      });
+      if (!others) {
+        res.status(404).json({
+          status: "error",
+          message: "Others components not found",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "All others components found successfully",
+          data: others,
+        });
+      }
     }
   } finally {
   }

@@ -14,7 +14,7 @@ export default function Banner() {
                 Build My Rig
               </p>
             </div>
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-red-500 sm:text-4xl sm:leading-none">
               Unleash Your Power,
               <br className="hidden md:block" />
               Craft Your{" "}
@@ -46,7 +46,7 @@ export default function Banner() {
           </Link>
         </div>
         <div>
-          <Image src={bannerImage} className="w-4/6 4/6" />
+          <Image src={bannerImage} className="w-4/6 4/6" alt="image" />
         </div>
       </div>
     </div>

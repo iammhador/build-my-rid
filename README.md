@@ -18,7 +18,7 @@ Build a clean and straightforward PC Builder website for PC parts and components
   - Storage Device
   - Monitor
   - Others
-  Each category should have a corresponding route. (SSG implementation)
+    Each category should have a corresponding route. (SSG implementation)
 
 ### Home Page: (SSG implementation)
 
@@ -123,9 +123,48 @@ You should add the links to the readme.md file.
 1. To manage the product's data, you need to create your own backend. This backend could be a single-page backend server or integrated with Next API routes.
 2. Do not use 'app' router.
 
+//# Category:
 https://i.ibb.co/c6vBpZW/chip.png
 https://i.ibb.co/Mhm3PXy/cpu.png
 https://i.ibb.co/cFfCLGC/monitor.png
 https://i.ibb.co/XCt0Mz1/motherboard.png
 https://i.ibb.co/Vpqy6Gs/power-supply.png
 https://i.ibb.co/gvyc9Wr/video-card.png
+
+//# Processor:
+https://i.ibb.co/zS9ZPcG/51f2hk-Wj-Tl-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/9qHpvMH/71id-AEIDhv-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/bvNQjrP/91-YH5-Dj-Wbe-L-AC-SX300-SY300-QL70-FMwebp.webp
+
+//# Motherboard:
+https://i.ibb.co/fQ89F71/71b-Cz-Km-CHQL-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/JQZnmRB/71-Gm7vworo-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/FKLbNvM/710hy-HWebn-L-AC-UY327-FMwebp-QL65.webp
+
+//# Ram:
+https://i.ibb.co/SNpbWjg/41a2jzud-Kt-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/5hF5P08/71e6-YWJio-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/Kb5pnVj/5134-NIlg-Pp-S-AC-SX679-PIbundle-2-Top-Right-0-0-SH20.jpg
+
+//# Power Supply:
+https://i.ibb.co/m5nChZf/71-VX0-SPnbv-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/Jx4pRrC/81k55rfk1i-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/rdgbR6y/710gi-QRHy-QS-AC-UY327-FMwebp-QL65.webp
+
+//# Monitor:
+https://i.ibb.co/Zhr4Xj7/51b5m-T6-ZKL-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/k2xXVW0/71-4-Ze-UWzq-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/jvw0Qzc/914o-VQ1-DS1-L-AC-UY327-FMwebp-QL65.webp
+
+//# Others:
+https://i.ibb.co/zm7TV90/81c5s0yiy-XL-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/DLnPM8b/81rg-38-Ad-JL-AC-UL480-FMwebp-QL65.webp
+https://i.ibb.co/3mKZRGT/817-PMNo-Kf-XL-AC-UY327-FMwebp-QL65.webp
+
+//# Products:
+https://i.ibb.co/4JJSDp4/51k5w-AFZg-FL-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/nzYg3j7/71-Av-Cdkq-Vk-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/NxLZwCd/71ct-RE34-Ru-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/xGy7bgm/81k-VFBp13-RL-AC-UL480-FMwebp-QL65.webp
+https://i.ibb.co/hfZnZyb/515-Lrr-MQw8-L-AC-UY327-FMwebp-QL65.webp
+https://i.ibb.co/0Fm5XQb/813-Lr33nf-IL-AC-UY327-FMwebp-QL65.webp

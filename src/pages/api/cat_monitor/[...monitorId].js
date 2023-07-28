@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const uri = `mongodb+srv://${process.env.MD_USER}:${process.env.MD_PASS}@cluster0.cqqhz9d.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
@@ -15,7 +15,13 @@ async function run(req, res) {
     const monitorCollection = client.db("buildmyrig").collection("cat_monitor");
 
     if (req.method === "GET") {
-      const monitor = await monitorCollection.find({}).toArray();
+      const idArray = req.query.monitorId;
+      const monitorId = idArray[0];
+
+      const monitor = await monitorCollection.findOne({
+        _id: new ObjectId(monitorId),
+      });
+
       if (!monitor) {
         res.status(404).json({
           status: "error",
@@ -24,7 +30,7 @@ async function run(req, res) {
       } else {
         res.status(200).json({
           status: "success",
-          message: "All monitor found successfully",
+          message: "Single monitor details found successfully",
           data: monitor,
         });
       }
@@ -32,4 +38,5 @@ async function run(req, res) {
   } finally {
   }
 }
+
 export default run;

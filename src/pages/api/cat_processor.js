@@ -18,11 +18,40 @@ async function run(req, res) {
 
     if (req.method === "GET") {
       const processor = await processorCollection.find({}).toArray();
-      res.status(200).json({
-        status: "success",
-        message: "all processor details found successfully",
-        data: processor,
-      });
+      if (!processor) {
+        res.status(404).json({
+          status: "error",
+          message: "Processor not found",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "All processor found successfully",
+          data: processor,
+        });
+      }
+    }
+
+    if (req.method === "GET") {
+      const idArray = req.query;
+      // const processorId = idArray[0];
+
+      console.log(idArray);
+      // const processor = await processorCollection.findOne({
+      //   _id: new ObjectId(processorId),
+      // });
+      // if (!processor) {
+      //   res.status(404).json({
+      //     status: "error",
+      //     message: "Processor not found",
+      //   });
+      // } else {
+      //   res.status(200).json({
+      //     status: "success",
+      //     message: "All processor found successfully",
+      //     data: processor,
+      //   });
+      // }
     }
   } finally {
   }

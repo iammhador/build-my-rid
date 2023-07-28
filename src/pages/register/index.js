@@ -11,32 +11,32 @@ export default function Register() {
       <Head>
         <title>Build My Rig - Register</title>
       </Head>
-      <section class="bg-gray-900 px-10">
-        <div class="container px-6 py-24 mx-auto lg:py-32">
-          <div class="lg:flex">
-            <div class="lg:w-1/2">
+      <section className="bg-gray-900 px-10">
+        <div className="container px-6 py-24 mx-auto lg:py-32">
+          <div className="lg:flex">
+            <div className="lg:w-1/2">
               <img
-                class="w-auto h-7 sm:h-8"
+                className="w-auto h-7 sm:h-8"
                 src="https://merakiui.com/images/logo.svg"
                 alt=""
               />
 
-              <h1 class="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
+              <h1 className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
                 Welcome back
               </h1>
 
-              <h1 class="mt-4 text-2xl font-medium text-gray-800 capitalize lg:text-3xl dark:text-white">
+              <h1 className="mt-4 text-2xl font-medium text-gray-800 capitalize lg:text-3xl dark:text-white">
                 login to your account
               </h1>
             </div>
 
-            <div class="mt-8 lg:w-1/2 lg:mt-0">
-              <form class="w-full lg:max-w-xl">
-                <div class="relative flex items-center">
-                  <span class="absolute">
+            <div className="mt-8 lg:w-1/2 lg:mt-0">
+              <form className="w-full lg:max-w-xl">
+                <div className="relative flex items-center">
+                  <span className="absolute">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500"
+                      className="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -52,16 +52,16 @@ export default function Register() {
 
                   <input
                     type="email"
-                    class="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Email address"
                   />
                 </div>
 
-                <div class="relative flex items-center mt-4">
-                  <span class="absolute">
+                <div className="relative flex items-center mt-4">
+                  <span className="absolute">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500"
+                      className="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -77,22 +77,22 @@ export default function Register() {
 
                   <input
                     type="password"
-                    class="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Password"
                   />
                 </div>
 
-                <div class="mt-8 md:flex md:items-center">
+                <div className="mt-8 md:flex md:items-center">
                   <button
                     type="submit"
-                    class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg md:w-1/2 hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+                    className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg md:w-1/2 hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
                   >
                     Sign in
                   </button>
 
                   <a
                     href="#"
-                    class="inline-block mt-4 text-center text-blue-500 md:mt-0 md:mx-6 hover:underline dark:text-blue-400"
+                    className="inline-block mt-4 text-center text-blue-500 md:mt-0 md:mx-6 hover:underline dark:text-blue-400"
                   >
                     Forgot your password?
                   </a>
@@ -101,12 +101,12 @@ export default function Register() {
             </div>
           </div>
 
-          <div class="mt-8 md:mt-24 sm:flex sm:items-center">
-            <h3 class="text-blue-500 dark:text-blue-400 sm:w-1/2">
+          <div className="mt-8 md:mt-24 sm:flex sm:items-center">
+            <h3 className="text-blue-500 dark:text-blue-400 sm:w-1/2">
               Social networks
             </h3>
 
-            <div class="flex items-center mt-4 sm:mt-0 -mx-1.5 sm:w-1/2">
+            <div className="flex items-center mt-4 sm:mt-0 -mx-1.5 sm:w-1/2">
               <FaGoogle
                 onClick={() =>
                   signIn("google", {

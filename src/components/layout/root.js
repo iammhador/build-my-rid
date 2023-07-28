@@ -2,7 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { useSession, signOut } from "next-auth/react";
-
+import avater from "@/assets/boy.png";
+import Image from "next/image";
 export default function RootLayout({ children }) {
   const { data: session } = useSession();
   return (
@@ -85,11 +86,19 @@ export default function RootLayout({ children }) {
             </li>
           </ul>
         </div>
+        <div>
+          <Link
+            href={"/builder"}
+            className="hover:bg-gray-800 px-3 py-2 rounded-lg"
+          >
+            Builder
+          </Link>
+        </div>
         <div className="navbar-end mr-5">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <Image src={avater} width={100} height={100} alt="image" />
               </div>
             </label>
             <ul

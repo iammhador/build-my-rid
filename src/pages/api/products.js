@@ -16,11 +16,18 @@ async function run(req, res) {
 
     if (req.method === "GET") {
       const products = await productCollection.find({}).toArray();
-      res.status(200).json({
-        status: "success",
-        message: "all products details found successfully",
-        data: products,
-      });
+      if (!products) {
+        res.status(404).json({
+          status: "error",
+          message: "Products not found",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "All products found successfully",
+          data: products,
+        });
+      }
     }
   } finally {
   }

@@ -4,7 +4,7 @@ import Category from "./category";
 const Categories = ({ categories }) => {
   return (
     <div className="mx-20 my-10">
-      <h2 className="text-center text-gray-900 font-bold text-4xl uppercase mb-5">
+      <h2 className="text-center text-red-500 font-bold text-4xl uppercase mb-5">
         Our Categories
       </h2>
       <div className="grid grid-cols-3 justify-items-center">

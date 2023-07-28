@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const uri = `mongodb+srv://${process.env.MD_USER}:${process.env.MD_PASS}@cluster0.cqqhz9d.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
@@ -12,24 +12,31 @@ const client = new MongoClient(uri, {
 async function run(req, res) {
   try {
     await client.connect();
-    const monitorCollection = client.db("buildmyrig").collection("cat_monitor");
+    const ramCollection = client.db("buildmyrig").collection("cat_ram");
 
     if (req.method === "GET") {
-      const monitor = await monitorCollection.find({}).toArray();
-      if (!monitor) {
+      const idArray = req.query.ramId;
+      const ramId = idArray[0];
+
+      const ram = await ramCollection.findOne({
+        _id: new ObjectId(ramId),
+      });
+
+      if (!ram) {
         res.status(404).json({
           status: "error",
-          message: "Monitor not found",
+          message: "Ram not found",
         });
       } else {
         res.status(200).json({
           status: "success",
-          message: "All monitor found successfully",
-          data: monitor,
+          message: "Single ram details found successfully",
+          data: ram,
         });
       }
     }
   } finally {
   }
 }
+
 export default run;

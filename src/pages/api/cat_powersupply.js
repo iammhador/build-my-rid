@@ -18,11 +18,18 @@ async function run(req, res) {
 
     if (req.method === "GET") {
       const powerSupply = await powerSupplyCollection.find({}).toArray();
-      res.status(200).json({
-        status: "success",
-        message: "all power supply details found successfully",
-        data: powerSupply,
-      });
+      if (!powerSupply) {
+        res.status(404).json({
+          status: "error",
+          message: "Power supply not found",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "All power supply found successfully",
+          data: powerSupply,
+        });
+      }
     }
   } finally {
   }

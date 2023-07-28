@@ -16,11 +16,18 @@ async function run(req, res) {
 
     if (req.method === "GET") {
       const ram = await ramCollection.find({}).toArray();
-      res.status(200).json({
-        status: "success",
-        message: "all ram details found successfully",
-        data: ram,
-      });
+      if (!ram) {
+        res.status(404).json({
+          status: "error",
+          message: "Ram not found",
+        });
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "All ram found successfully",
+          data: ram,
+        });
+      }
     }
   } finally {
   }
