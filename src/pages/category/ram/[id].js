@@ -56,7 +56,7 @@ export const getStaticPaths = async () => {
   const response = await fetch("http://localhost:3000/api/cat_ram");
   const ram = await response.json();
 
-  const paths = ram.data.map((x) => ({
+  const paths = ram?.data?.map((x) => ({
     params: { id: x._id },
   }));
 

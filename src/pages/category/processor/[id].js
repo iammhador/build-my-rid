@@ -56,7 +56,7 @@ export const getStaticPaths = async () => {
   const response = await fetch("http://localhost:3000/api/cat_processor");
   const processor = await response.json();
 
-  const paths = processor.data.map((x) => ({
+  const paths = processor?.data?.map((x) => ({
     params: { id: x._id },
   }));
 

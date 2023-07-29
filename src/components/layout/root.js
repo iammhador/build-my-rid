@@ -65,35 +65,45 @@ export default function RootLayout({ children }) {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <Link href="/login">Login</Link>
-            </li>
             <li tabIndex={0}>
               <details>
-                <summary>Parent</summary>
+                <summary>Category</summary>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <Link href={"/category/processor"}>Processor</Link>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <Link href={"/category/motherboard"}>Motherboard</Link>
+                  </li>
+                  <li>
+                    <Link href={"/category/ram"}>Ram</Link>
+                  </li>
+                  <li>
+                    <Link href={"/category/power-supply-unit"}>
+                      Power Supply
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"/category/monitor"}>Monitor</Link>
+                  </li>
+                  <li>
+                    <Link href={"/category/others"}>Others</Link>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <Link href="/register">Register</Link>
+              <Link href={"/login"}>Login</Link>
+            </li>
+            <li>
+              <Link href={"/register"}>Register</Link>
+            </li>
+            <li>
+              <Link href={"/builder"}>Builder</Link>
             </li>
           </ul>
         </div>
-        <div>
-          <Link
-            href={"/builder"}
-            className="hover:bg-gray-800 px-3 py-2 rounded-lg"
-          >
-            Builder
-          </Link>
-        </div>
+
         <div className="navbar-end mr-5">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

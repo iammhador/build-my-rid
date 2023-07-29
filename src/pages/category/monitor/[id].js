@@ -55,8 +55,7 @@ MonitorDetails.getLayout = function getLayout(page) {
 export const getStaticPaths = async () => {
   const response = await fetch("http://localhost:3000/api/cat_monitor");
   const monitor = await response.json();
-
-  const paths = monitor.data.map((x) => ({
+  const paths = monitor?.data?.map((x) => ({
     params: { id: x._id },
   }));
 

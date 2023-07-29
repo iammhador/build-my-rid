@@ -56,7 +56,7 @@ export const getStaticPaths = async () => {
   const response = await fetch("http://localhost:3000/api/cat_motherboard");
   const motherboard = await response.json();
 
-  const paths = motherboard.data.map((x) => ({
+  const paths = motherboard?.data?.map((x) => ({
     params: { id: x._id },
   }));
 

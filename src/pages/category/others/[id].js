@@ -56,7 +56,7 @@ export const getStaticPaths = async () => {
   const response = await fetch("http://localhost:3000/api/cat_others");
   const others = await response.json();
 
-  const paths = others.data.map((x) => ({
+  const paths = others?.data?.map((x) => ({
     params: { id: x._id },
   }));
 

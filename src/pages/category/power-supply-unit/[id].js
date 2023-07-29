@@ -56,7 +56,7 @@ export const getStaticPaths = async () => {
   const response = await fetch("http://localhost:3000/api/cat_powersupply");
   const powerSupply = await response.json();
 
-  const paths = powerSupply.data.map((x) => ({
+  const paths = powerSupply?.data?.map((x) => ({
     params: { id: x._id },
   }));
 

@@ -4,27 +4,21 @@ import RootLayout from "@/components/layout/root";
 import { FaGoogle } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { useSession, signIn } from "next-auth/react";
+import Image from "next/image";
+import logo from "../../assets/workstation.png";
 
 export default function Login() {
-  const { data } = useSession();
   return (
     <div>
       <Head>
         <title>Build My Rig - Login</title>
       </Head>
       <div>
-        <Head>
-          <title>Build My Rig - Register</title>
-        </Head>
         <section className="bg-gray-900 px-10">
           <div className="container px-6 py-24 mx-auto lg:py-32">
             <div className="lg:flex">
               <div className="lg:w-1/2">
-                <img
-                  className="w-auto h-7 sm:h-8"
-                  src="https://merakiui.com/images/logo.svg"
-                  alt="image"
-                />
+                <Image src={logo} width={120} height={80} alt="image" />
 
                 <h1 className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
                   Welcome back
