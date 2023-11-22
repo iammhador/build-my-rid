@@ -53,7 +53,9 @@ PowerSupplyDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const response = await fetch("http://localhost:3000/api/cat_powersupply");
+  const response = await fetch(
+    "https://build-my-rig-server.vercel.app/api/cat_powersupply"
+  );
   const powerSupply = await response.json();
 
   const paths = powerSupply?.data?.map((x) => ({
@@ -70,7 +72,7 @@ export const getStaticProps = async ({ params }) => {
   const { id } = params;
 
   const response = await fetch(
-    `http://localhost:3000/api/cat_powersupply/${id}`
+    `https://build-my-rig-server.vercel.app/api/cat_powersupply/${id}`
   );
   const powerSupply = await response.json();
 

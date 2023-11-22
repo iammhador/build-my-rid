@@ -9,7 +9,7 @@ export default function ShowProduct({ data }) {
     <Link href={`/products/${_id}`} className="mx-3">
       <div className="flex flex-col md:flex-row w-full justify-center items-center overflow-hidden bg-white rounded-lg shadow-lg mb-10 py-3 px-5 hover:bg-gray-50">
         <div className="w-1/3 md:w-1/4">
-          <img
+          <Image
             src={product_image}
             alt="image"
             className="w-full h-full object-cover"

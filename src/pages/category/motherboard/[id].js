@@ -53,7 +53,9 @@ MotherboardDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const response = await fetch("http://localhost:3000/api/cat_motherboard");
+  const response = await fetch(
+    "https://build-my-rig-server.vercel.app/api/cat_motherboard"
+  );
   const motherboard = await response.json();
 
   const paths = motherboard?.data?.map((x) => ({
@@ -70,7 +72,7 @@ export const getStaticProps = async ({ params }) => {
   const { id } = params;
 
   const response = await fetch(
-    `http://localhost:3000/api/cat_motherboard/${id}`
+    `https://build-my-rig-server.vercel.app/api/cat_motherboard/${id}`
   );
   const motherboard = await response.json();
 

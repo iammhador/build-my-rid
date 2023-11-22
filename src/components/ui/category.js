@@ -10,7 +10,7 @@ export default function Category({ category }) {
       <Link href={`/category/${category_name}`} className="block">
         <div className="w-full md:w-1/3 mx-auto">
           <div className="w-full md:w-1/2 lg:w-1/3 mx-auto">
-            <img
+            <Image
               src={image}
               alt="image"
               className="w-full h-full object-cover rounded-md"

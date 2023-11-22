@@ -53,7 +53,9 @@ OthersDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const response = await fetch("http://localhost:3000/api/cat_others");
+  const response = await fetch(
+    "https://build-my-rig-server.vercel.app/api/cat_others"
+  );
   const others = await response.json();
 
   const paths = others?.data?.map((x) => ({
@@ -69,7 +71,9 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:3000/api/cat_others/${id}`);
+  const response = await fetch(
+    `https://build-my-rig-server.vercel.app/api/cat_others/${id}`
+  );
   const others = await response.json();
 
   return { props: { others } };

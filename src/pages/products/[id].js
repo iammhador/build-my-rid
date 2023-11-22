@@ -55,7 +55,9 @@ ProductDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const response = await fetch("http://localhost:3000/api/products");
+  const response = await fetch(
+    "https://build-my-rig-server.vercel.app/api/products"
+  );
   const products = await response.json();
 
   const paths = products?.data?.map((product) => ({
@@ -71,7 +73,9 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:3000/api/products/${id}`);
+  const response = await fetch(
+    `https://build-my-rig-server.vercel.app/api/products/${id}`
+  );
   const product = await response.json();
 
   return { props: { product } };

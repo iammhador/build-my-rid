@@ -62,7 +62,9 @@ PowerSupplyBuilder.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/cat_powersupply");
+  const res = await fetch(
+    "https://build-my-rig-server.vercel.app/api/cat_powersupply"
+  );
   const data = await res.json();
 
   return { props: { powerSupply: data.data } };

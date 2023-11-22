@@ -62,7 +62,9 @@ ProcessorBuilder.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/cat_processor");
+  const res = await fetch(
+    "https://build-my-rig-server.vercel.app/api/cat_processor"
+  );
   const data = await res.json();
 
   return { props: { processor: data.data } };

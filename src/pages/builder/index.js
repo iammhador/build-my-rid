@@ -379,7 +379,9 @@ Builder.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/categories");
+  const res = await fetch(
+    "https://build-my-rig-server.vercel.app/api/categories"
+  );
   const categories = await res.json();
 
   return { props: { categories: categories.data } };

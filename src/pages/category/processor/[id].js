@@ -53,7 +53,9 @@ ProcessorDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const response = await fetch("http://localhost:3000/api/cat_processor");
+  const response = await fetch(
+    "https://build-my-rig-server.vercel.app/api/cat_processor"
+  );
   const processor = await response.json();
 
   const paths = processor?.data?.map((x) => ({
@@ -69,7 +71,9 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:3000/api/cat_processor/${id}`);
+  const response = await fetch(
+    `https://build-my-rig-server.vercel.app/api/cat_processor/${id}`
+  );
   const processor = await response.json();
 
   return { props: { processor } };
