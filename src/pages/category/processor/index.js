@@ -1,5 +1,5 @@
 import RootLayout from "@/components/layout/root";
-import SingleProcessor from "@/components/ui/processor";
+import SingleProcessor from "@/components/category/processor";
 
 function Processor({ processor }) {
   return (

@@ -1,5 +1,5 @@
 import RootLayout from "@/components/layout/root";
-import SingleMonitor from "@/components/ui/monitor";
+import SingleMonitor from "@/components/category/monitor";
 
 function Monitor({ monitor }) {
   return (

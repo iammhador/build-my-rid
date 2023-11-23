@@ -1,15 +1,20 @@
 import RootLayout from "@/components/layout/root";
 import Banner from "@/components/ui/banner";
+import Blog from "@/components/ui/blog";
 import Categories from "@/components/ui/categories";
-import Products from "@/components/ui/products";
-import React from "react";
+import FAQ from "@/components/ui/faq";
+import Feature from "@/components/ui/feature";
+import NeedHelp from "@/components/ui/help";
 
-const Home = ({ categories, products }) => {
+const Home = ({ categories }) => {
   return (
     <div>
       <Banner />
-      <Products products={products} />
+      <Feature />
       <Categories categories={categories} />
+      <NeedHelp />
+      <FAQ />
+      <Blog />
     </div>
   );
 };

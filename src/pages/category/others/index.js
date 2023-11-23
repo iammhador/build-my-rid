@@ -1,5 +1,5 @@
 import RootLayout from "@/components/layout/root";
-import SingleOthers from "@/components/ui/others";
+import SingleOthers from "@/components/category/others";
 
 function Others({ others }) {
   return (

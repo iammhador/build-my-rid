@@ -6,23 +6,17 @@ export default function Category({ category }) {
   const { category_name, image } = category;
 
   return (
-    <div className="bg-white py-8 px-5 md:px-14 mb-5 rounded-md shadow-lg hover:bg-gray-300">
-      <Link href={`/category/${category_name}`} className="block">
-        <div className="w-full md:w-1/3 mx-auto">
-          <div className="w-full md:w-1/2 lg:w-1/3 mx-auto">
-            <Image
-              src={image}
-              alt="image"
-              width={100}
-              height={100}
-              className="w-full h-full object-cover rounded-md"
-            />
+    <div className="bg-white py-8 px-5 md:px-14 mb-5 rounded-lg shadow-lg ">
+      <Link href={`/category/${category_name}`}>
+        <div className="block">
+          <div className="w-full md:w-1/3 mx-auto">
+            <Image src={image} alt={category_name} width={500} height={500} />
           </div>
-        </div>
-        <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4 text-center">
-          <strong className="font-bold text-red-500 uppercase">
-            {category_name}
-          </strong>
+          <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4 text-center">
+            <strong className="font-medium text-sm text-gray-400 capitalize">
+              {category_name}
+            </strong>
+          </div>
         </div>
       </Link>
     </div>

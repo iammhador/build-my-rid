@@ -1,5 +1,5 @@
 import RootLayout from "@/components/layout/root";
-import SingleRam from "@/components/ui/ram";
+import SingleRam from "@/components/category/ram";
 
 function Ram({ ram }) {
   return (

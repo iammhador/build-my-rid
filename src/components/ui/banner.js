@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import bannerImage from "../../assets/banner.png";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -19,9 +20,12 @@ export default function Banner() {
             <button className="bg-black font-medium text-white border border-black  px-4 py-2 mr-4 rounded-sm my-1">
               Choose Pre-Built
             </button>
-            <button className="bg-white font-medium text-black border border-black px-4 py-2 rounded-sm my-1">
+            <Link
+              href="/builder"
+              className="bg-white font-medium text-black border border-black px-4 py-2 rounded-sm my-1"
+            >
               Build Your Own
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex items-center justify-center">

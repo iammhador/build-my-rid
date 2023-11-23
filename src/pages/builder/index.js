@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import processor from "../../assets/cpu.png";
+import processor from "../../assets/chip.png";
 import motherboard from "../../assets/motherboard.png";
 import ram from "../../assets/chip.png";
 import powerSupply from "../../assets/power-supply.png";
 import monitor from "../../assets/monitor.png";
-import others from "../../assets/video-card.png";
+import others from "../../assets/keyboard.png";
 import toast, { Toaster } from "react-hot-toast";
 export default function Builder({ categories }) {
   const [allProductsSelected, setAllProductsSelected] = useState(false);

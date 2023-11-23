@@ -1,5 +1,5 @@
 import RootLayout from "@/components/layout/root";
-import SinglePowerSupply from "@/components/ui/power-supply";
+import SinglePowerSupply from "@/components/category/power-supply";
 
 function PowerSupplyUnit({ powerSupply }) {
   return (

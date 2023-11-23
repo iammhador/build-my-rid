@@ -5,7 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { useSession, signIn } from "next-auth/react";
 import Image from "next/image";
-import logo from "../../assets/workstation.png";
+import logo from "../../assets/blog-img3.jpg";
 
 export default function Login() {
   return (

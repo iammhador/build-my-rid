@@ -1,5 +1,5 @@
 import RootLayout from "@/components/layout/root";
-import SingleMotherboard from "@/components/ui/motherboard";
+import SingleMotherboard from "@/components/category/motherboard";
 
 function Motherboard({ motherboard }) {
   return (

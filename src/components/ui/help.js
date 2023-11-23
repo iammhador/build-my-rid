@@ -4,7 +4,10 @@ import { TbPhoneCall } from "react-icons/tb";
 
 const NeedHelp = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div
+      id="Help"
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
       <div className="mb-4 text-center md:text-left">
         <h2 className="text-4xl font-semibold text-black mb-4">Need Help?</h2>
       </div>
