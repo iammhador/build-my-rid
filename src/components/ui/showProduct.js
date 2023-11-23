@@ -10,6 +10,8 @@ export default function ShowProduct({ data }) {
       <div className="flex flex-col md:flex-row w-full justify-center items-center overflow-hidden bg-white rounded-lg shadow-lg mb-10 py-3 px-5 hover:bg-gray-50">
         <div className="w-1/3 md:w-1/4">
           <Image
+            width={100}
+            height={100}
             src={product_image}
             alt="image"
             className="w-full h-full object-cover"

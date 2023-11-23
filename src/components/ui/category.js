@@ -13,6 +13,8 @@ export default function Category({ category }) {
             <Image
               src={image}
               alt="image"
+              width={100}
+              height={100}
               className="w-full h-full object-cover rounded-md"
             />
           </div>
