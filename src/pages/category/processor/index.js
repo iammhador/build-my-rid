@@ -1,15 +1,15 @@
 import RootLayout from "@/components/layout/root";
-import SingleProcessor from "@/components/category/processor";
+import Card from "@/components/ui/card";
 
 function Processor({ processor }) {
   return (
-    <div className="h-screen mx-10 my-10">
-      <h1 className="text-4xl font-bold text-center text-red-500 uppercase">
-        All Processor
-      </h1>
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <h2 className="text-4xl font-semibold text-black mb-4 md:mb-0">
+        Processor
+      </h2>
       <div className="grid grid-cols-3 mt-10 justify-items-center">
         {processor.map((x) => (
-          <SingleProcessor key={x._id} data={x} />
+          <Card key={x._id} data={x} />
         ))}
       </div>
     </div>

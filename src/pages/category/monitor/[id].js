@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import RootLayout from "@/components/layout/root";
 import Image from "next/image";
+import { IoMdStar } from "react-icons/io";
 
 export default function MonitorDetails({ monitor }) {
   const {
@@ -14,34 +16,53 @@ export default function MonitorDetails({ monitor }) {
     key_features,
     reviews,
   } = monitor.data;
-  return (
-    <div className="h-screen">
-      <div className="card lg:card-side bg-white hover:bg-gray-50 shadow-xl my-20 w-5/6 mx-auto py-10 px-10">
-        <figure>
-          <Image src={image} width={300} height={120} alt="image" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-red-500">{product_name} </h2>
 
-          <p className=" text-gray-600 capitalize">Category : {category}</p>
-          <p className=" text-gray-600">Price : {price}</p>
-          <p className=" text-gray-600">Status : {status}</p>
-          <p className=" text-gray-600">Average Rating : {average_rating}</p>
-          <p className=" text-gray-600">
-            Individual Rating : {individual_rating}
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="bg-white shadow-xl my-10 mx-auto max-w-3xl p-8 rounded-md grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex justify-center items-center mb-8 md:mb-0">
+          <Image src={image} width={300} height={120} alt="Product Image" />
+        </div>
+        <div className="text-black">
+          <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold mb-4">
+            {product_name}
+          </h2>
+
+          <p className="text-base md:text-lg lg:text-xl mb-2 capitalize">
+            Category: {category}
           </p>
-          <p className=" text-gray-600">Description : {description}</p>
-          <p className=" text-gray-600">
-            Key Features : {key_features.Brand} {key_features.Model}
+          <p className="text-base md:text-lg lg:text-xl mb-2 font-medium">
+            Price: ${price}
           </p>
-          <p className=" text-gray-600">
-            {reviews[0]?.username} : {reviews[0]?.review_text} ( ratting:{" "}
-            {reviews[0]?.rating} )
+          <p className="text-base md:text-lg lg:text-xl mb-2">
+            Status: {status}
           </p>
-          <p className=" text-gray-600">
-            {reviews[1]?.username} : {reviews[1]?.review_text} ( ratting:{" "}
-            {reviews[1]?.rating} )
+          <p className="text-base md:text-lg lg:text-xl mb-2">
+            Average Rating: {average_rating}{" "}
+            <IoMdStar className="inline-block text-yellow-500" />
           </p>
+          <p className="text-base md:text-lg lg:text-xl mb-2">
+            Individual Rating: {individual_rating}
+          </p>
+
+          <p className="text-base md:text-lg lg:text-xl mb-4">
+            Description: {description}
+          </p>
+          <p className="text-base md:text-lg lg:text-xl mb-4">
+            Key Features: {key_features?.Brand} {key_features?.Model}
+          </p>
+
+          <div className="mt-4">
+            {reviews.map((review, index) => (
+              <div key={index} className="mb-2">
+                <p className="text-base md:text-lg lg:text-xl">
+                  {review.username} says: "{review.review_text}" (Rating:{" "}
+                  {review.rating}{" "}
+                  <IoMdStar className="inline-block text-yellow-500" />)
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
