@@ -11,6 +11,7 @@ import powerSupply from "../../assets/power-supply.png";
 import monitor from "../../assets/monitor.png";
 import others from "../../assets/keyboard.png";
 import toast, { Toaster } from "react-hot-toast";
+import { TbHandFinger } from "react-icons/tb";
 export default function Builder({ categories }) {
   const [allProductsSelected, setAllProductsSelected] = useState(false);
 
@@ -56,10 +57,10 @@ export default function Builder({ categories }) {
       <Head>
         <title>Build My Rig - PC Builder</title>
       </Head>
-      <div className="my-20 mx-10 ">
-        <h1 className="uppercase text-center text-4xl font-bold text-red-500">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <h2 className="text-4xl font-semibold text-black text-">
           Build Your Pc
-        </h1>
+        </h2>
         <div className="my-5">
           <div className="w-2/3 h-2/5 py-5 px-5 bg-gray-300 hover:bg-slate-50 mx-auto rounded-lg mb-3">
             <div className="grid grid-cols-12 justify-center items-center">

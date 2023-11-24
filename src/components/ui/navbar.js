@@ -1,17 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import { MdBuildCircle } from "react-icons/md";
+import logo from "../../assets/logo.png";
 const Navbar = () => {
   return (
-    <nav className="px-8 py-4 bg-black mx-auto ">
+    <nav className="px-8 py-4 bg-white mx-auto ">
       <div className="container mx-auto flex items-center justify-between max-w-screen-xl">
-        <div className="text-white font-bold text-lg">
-          <Link href="/">Build My Rig</Link>
+        <div className="text-black font-bold text-lg">
+          <Link href="/">
+            <Image src={logo} width={80} height={50} alt="logo" />
+          </Link>
         </div>
 
         <div className="lg:hidden">
           <button
-            className="text-white hover:text-gray-300 focus:outline-none"
+            className="text-black hover:text-gray-700 focus:outline-none"
             onClick={() => console.log("Toggle mobile menu")}
           >
             <svg
@@ -32,26 +36,32 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex space-x-4">
-          <Link href="/" className="text-white hover:text-gray-300">
+          <Link href="/" className="text-black hover:text-gray-700">
             Home
           </Link>
-          <Link href="#Features" className="text-white hover:text-gray-300">
+          <Link href="#Features" className="text-black hover:text-gray-700">
             Features
           </Link>
-          <Link href="#Components" className="text-white hover:text-gray-300">
+          <Link href="#Components" className="text-black hover:text-gray-700">
             Components
           </Link>
-          <Link href="#Help" className="text-white hover:text-gray-300">
+          <Link href="#Help" className="text-black hover:text-gray-700">
             Help
           </Link>
-          <Link href="#FAQ" className="text-white hover:text-gray-300">
+          <Link href="#FAQ" className="text-black hover:text-gray-700">
             FAQ
           </Link>
-          <Link href="#Blog" className="text-white hover:text-gray-300">
+          <Link href="#Blog" className="text-black hover:text-gray-800">
             Blog
           </Link>
-          <Link href="/builder" className="text-white hover:text-gray-300">
-            PC Builder
+        </div>
+
+        <div>
+          <Link
+            href="/builder"
+            className="text-black text-3xl hover:text-gray-700"
+          >
+            <MdBuildCircle className="" />
           </Link>
         </div>
       </div>
