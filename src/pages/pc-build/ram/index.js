@@ -11,37 +11,41 @@ function RamBuilder({ ram }) {
     dispatch(addRam(ram));
   };
   return (
-    <div className="h-screen mx-10 my-10">
-      <h1 className="text-4xl font-bold text-center text-red-500 uppercase">
-        All Ram
-      </h1>
-      <div className="grid grid-cols-3 mt-10 justify-center items-center content-center">
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="flex flex-col md:flex-row justify-between mb-5">
+        <h2 className="text-4xl font-semibold text-black mb-4 md:mb-0">Ram</h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ram.map((x) => (
           <div
             key={x?._id}
-            className="flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 justify-center content-center items-center"
+            className="bg-white rounded-md shadow-lg overflow-hidden transition-transform transform hover:scale-105"
           >
-            <div className="w-1/3 h-full bg-white">
-              <Image src={x?.image} width={200} height={200} alt="image" />
+            <div className="relative h-80 mt-5">
+              <Image
+                src={x?.image}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-lg "
+                alt="Processor Image"
+              />
             </div>
-
-            <div className="w-2/3 p-4 md:p-4">
-              <h1 className="text-xl font-bold text-gray-800 dark:text-white capitalize">
+            <div className="p-4">
+              <h1 className="text-xl font-bold text-gray-800 capitalize mb-2">
                 {x?.product_name}
               </h1>
-
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 capitalize">
-                {x?.category} | Status {x?.status} | {x?.average_rating}
+              <p className="text-sm text-gray-600 capitalize mb-2">
+                {x?.category} | Status: {x?.status} | Rating:{" "}
+                {x?.average_rating}
               </p>
-
-              <div className="flex justify-between mt-3 item-center">
-                <h1 className="text-lg font-bold text-gray-700 dark:text-gray-200 md:text-xl">
+              <div className="flex justify-between items-center">
+                <h1 className="text-lg font-bold text-gray-700 md:text-xl">
                   $ {x?.price}
                 </h1>
                 <Link href={"/builder"}>
                   <button
                     onClick={() => handleAddToBuild(x)}
-                    className="px-2 py-1 text-xs font-bold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none focus:bg-gray-700 dark:focus:bg-gray-600"
+                    className="px-3 py-2 text-sm font-bold text-white uppercase bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
                   >
                     Add To Builder
                   </button>

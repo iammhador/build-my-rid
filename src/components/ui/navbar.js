@@ -13,7 +13,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="lg:hidden">
+        <div className="hidden">
           <button
             className="text-black hover:text-gray-700 focus:outline-none"
             onClick={() => console.log("Toggle mobile menu")}
@@ -35,7 +35,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="hidden lg:flex space-x-4">
+        <div className="hidden md:flex space-x-4">
           <Link href="/" className="text-black hover:text-gray-700">
             Home
           </Link>
